@@ -24,10 +24,12 @@ function App() {
               {item.name}
             </li>
           ))}
-          <li>
-
-
-          </li>
+          <form>
+            <div className="mb-3 mt-5">
+              <input type="text" className="form-control" placeholder="New Item" />
+            </div>
+            <button type="submit" className="btn btn-primary">Add</button>
+          </form>
         </ul>
       </div>
     </>

@@ -1,8 +1,17 @@
 import { useState } from 'react'
-import './App.css'
+
+const listItems = [
+  { id: 1, name: 'Final Fantasy 1' },
+  { id: 2, name: 'Final Fantasy 2' },
+  { id: 3, name: 'Final Fantasy 3' },
+  { id: 4, name: 'Final Fantasy 4' },
+  { id: 5, name: 'Final Fantasy 5' },
+]
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>

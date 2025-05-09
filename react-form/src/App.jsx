@@ -8,14 +8,28 @@ const listItems = [
   { id: 5, name: 'Final Fantasy 5' },
 ]
 
-
-
 function App() {
 
 
   return (
     <>
+      <div className="container">
+        <h1>
+          Lista Item
+        </h1>
 
+        <ul className="list-group">
+          {listItems.map((item) => (
+            <li key={item.id} className="list-group-item">
+              {item.name}
+            </li>
+          ))}
+          <li>
+
+
+          </li>
+        </ul>
+      </div>
     </>
   )
 }

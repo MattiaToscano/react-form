@@ -10,6 +10,14 @@ const listItems = [
 
 function App() {
 
+  const [newItems, setNewItems] = useState('');
+
+  const addItem = (e) => {
+    e.preventDefault();
+    const item = newItems.trim();
+
+  }
+
 
   return (
     <>
@@ -24,9 +32,14 @@ function App() {
               {item.name}
             </li>
           ))}
-          <form>
+          <form onSubmit={addItem} >
             <div className="mb-3 mt-5">
-              <input type="text" className="form-control" placeholder="New Item" />
+              <input
+                value={newItems}
+                onChange={(e) => { setNewItems(e.target.value) }}
+                type="text"
+                className="form-control"
+                placeholder="New Item" />
             </div>
             <button type="submit" className="btn btn-primary">Add</button>
           </form>
